@@ -1,0 +1,79 @@
+# ===================================================================
+# .gitignore - Web Pencol 2
+# Mencegah file sensitif, data warga, dan file lokal terupload ke GitHub
+# ===================================================================
+
+# 1. Kredensial, API Keys & File Lingkungan
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.cert
+*.crt
+credentials.json
+secrets/
+
+# 2. Folder Khusus Data Sensitif & Berkas Internal (Hanya ada di komputer lokal)
+private/
+secret/
+arsip/
+data-warga/
+dokumen/
+assets/private/
+assets/raw/
+
+# 3. Dokumen Warga, Rekap Kas Riil, Database & Berkas Backup
+*.xlsx
+*.xls
+*.csv
+*.doc
+*.docx
+*.pdf
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.sql
+*.sqlite
+*.bak
+
+# 4. Konfigurasi Editor & IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# 5. File Sampah Sistem Operasi
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# 6. Log & Cache Sementara
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.temp/
+.tmp/
+tmp/
+cache/
+
+# ===================================================================
+# CATATAN KHUSUS UNTUK FOLDER ASSET:
+# -------------------------------------------------------------------
+# Jika Anda ingin menyembunyikan SELURUH folder assets dari GitHub,
+# hapus tanda pagar (#) pada baris di bawah ini:
+# assets/
+#
+# ⚠️ PERINGATAN: Jika folder 'assets/' dihapus dari GitHub, maka
+# gambar website (logo, hero banner, dsb.) TIDAK AKAN MUNCUL (error 404)
+# di GitHub Pages.
+# Solusi terbaik: Simpan file/foto rahasia ke dalam folder 'assets/private/'
+# atau folder 'private/' yang otomatis sudah diabaikan di atas.
+# ===================================================================
+
