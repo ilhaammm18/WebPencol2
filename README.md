@@ -172,12 +172,8 @@ Bagi pemuda, warga, maupun rekan developer Dusun Pencol 2 yang ingin menambahkan
 
 - **Dusun / Desa**: Pencol 2 (Randusongo), Desa Pencol
 - **Kecamatan / Kabupaten**: Kec. Gerih, Kab. Ngawi, Jawa Timur 63271
-- **Instagram**: [@karangtarunapencol2](#)
-- **TikTok**: [@pencol2.berkarya](#)
-- **Pengurus**:
-  - Ketua Karang Taruna: M. Rizki Pratama
-  - Bendahara Kas: Ahmad Fauzi
-
+- **Instagram**: [https://www.instagram.com/karangtarunapencol2?cplk=cGN0dmdldmlteW04](#)
+- **TikTok**: [https://www.tiktok.com/@kartarpencol2?_r=1&_t=ZS-9BBU8iXxzpk](#)
 ---
 
 <div align="center">
