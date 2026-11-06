@@ -172,8 +172,8 @@ Bagi pemuda, warga, maupun rekan developer Dusun Pencol 2 yang ingin menambahkan
 
 - **Dusun / Desa**: Pencol 2 (Randusongo), Desa Pencol
 - **Kecamatan / Kabupaten**: Kec. Gerih, Kab. Ngawi, Jawa Timur 63271
-- **Instagram**: [https://www.instagram.com/karangtarunapencol2?cplk=cGN0dmdldmlteW04](#)
-- **TikTok**: [https://www.tiktok.com/@kartarpencol2?_r=1&_t=ZS-9BBU8iXxzpk](#)
+- **Instagram**: [@karangtarunapencol2](https://www.instagram.com/karangtarunapencol2?cplk=cGN0dmdldmlteW04)
+- **TikTok**: [@kartarpencol2](https://www.tiktok.com/@kartarpencol2?_r=1&_t=ZS-9BBU8iXxzpk)
 ---
 
 <div align="center">
