@@ -1,11 +1,5 @@
-/**
- * DESA PENCOL 2 - PORTAL KEMERDEKAAN & KEGIATAN WARGA
- * Tema: Merah Putih Kemerdekaan
- * Kecamatan Gerih, Kabupaten Ngawi, Jawa Timur
- */
-
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Sticky Navbar on Scroll
+
   const header = document.querySelector('.site-header');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 30) {
@@ -15,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 2. Mobile Menu Toggle
   const mobileToggle = document.getElementById('mobileMenuToggle');
   const navMenu = document.getElementById('primaryNavMenu');
 
@@ -27,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileToggle.setAttribute('aria-expanded', expanded);
     });
 
-    // Close menu when clicking nav links
     document.querySelectorAll('.nav-link').forEach((link) => {
       link.addEventListener('click', () => {
         mobileToggle.classList.remove('active');
@@ -36,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. UI TABS SISTEM: DOKUMENTASI (AGUSTUS 2025 & AGUSTUS 2026)
   const tabButtons = document.querySelectorAll('.tab-btn');
   const tabPanels = document.querySelectorAll('.tab-content-panel');
 
@@ -44,18 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       const targetPanelId = btn.getAttribute('data-tab-target');
 
-      // Nonaktifkan semua tab button
       tabButtons.forEach((b) => {
         b.classList.remove('active');
         b.setAttribute('aria-selected', 'false');
       });
 
-      // Sembunyikan semua tab panel
       tabPanels.forEach((panel) => {
         panel.classList.remove('active');
       });
 
-      // Aktifkan tab yang dipilih
       btn.classList.add('active');
       btn.setAttribute('aria-selected', 'true');
 
@@ -66,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Modal Dialog Logic (Buka & Tutup)
   const openModalBtns = document.querySelectorAll('[data-open-modal]');
   const closeModalBtns = document.querySelectorAll('[data-close-modal]');
   const allModals = document.querySelectorAll('.modal-backdrop');
@@ -102,9 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ===================================================================
-  // 5. DATA DOKUMENTASI (20+ FOTO PER KATEGORI/TAHUN) & MODAL GALLERY
-  // ===================================================================
   const documentationData = {
     '2026': {
       title: 'Semarak Kemerdekaan RI ke-81 (Agustus 2026)',
@@ -472,7 +456,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // --- A. KONTROL SLIDER HORIZONTAL (PREV / NEXT ARROWS) ---
   const sliderTracks = document.querySelectorAll('.gallery-slider-track');
   const prevButtons = document.querySelectorAll('.slider-btn-prev');
   const nextButtons = document.querySelectorAll('.slider-btn-next');
@@ -513,11 +496,9 @@ document.addEventListener('DOMContentLoaded', () => {
       updateSliderArrows(track, prevBtn, nextBtn);
     });
 
-    // Jalankan inisialisasi awal
     updateSliderArrows(track, prevBtn, nextBtn);
   });
 
-  // Update slider arrows juga saat tab berganti
   tabButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
       setTimeout(() => {
@@ -531,7 +512,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- B. MODAL / LIGHTBOX GALLERY LENGKAP STATE & LOGIC ---
   const modalGalleryFull = document.getElementById('modalGalleryFull');
   const modalGalleryTitle = document.getElementById('modalGalleryTitle');
   const modalGalleryCountBadge = document.getElementById('modalGalleryCountBadge');
@@ -542,7 +522,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const galleryGridView = document.getElementById('galleryGridView');
   const gallerySingleView = document.getElementById('gallerySingleView');
 
-  // Single Photo View Elements
   const singlePhotoImg = document.getElementById('singlePhotoImg');
   const singlePhotoBadge = document.getElementById('singlePhotoBadge');
   const singlePhotoDate = document.getElementById('singlePhotoDate');
@@ -552,13 +531,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnSinglePrev = document.getElementById('btnSinglePrev');
   const btnSingleNext = document.getElementById('btnSingleNext');
 
-  // Gallery State
   let activeYear = '2026';
   let activeCategory = 'Semua';
   let activePhotoIndex = 0;
   let currentFilteredList = [];
 
-  // 1. Fungsi Membuka Modal Galeri
   function openGalleryModal(year = '2026', initialMode = 'grid', photoIndex = 0) {
     activeYear = year;
     const yearData = documentationData[year] || documentationData['2026'];
@@ -567,39 +544,32 @@ document.addEventListener('DOMContentLoaded', () => {
       modalGalleryTitle.textContent = `Dokumentasi Lengkap • ${yearData.title}`;
     }
 
-    // Render Filter Pills dinamis berdasarkan kategori yang ada
     renderFilterPills(yearData.photos);
 
-    // Filter daftar foto
     applyPhotoFilter('Semua', false);
 
-    // Tentukan View awal (Grid atau Single Foto)
     if (initialMode === 'single') {
       showSinglePhoto(photoIndex);
     } else {
       showGridView();
     }
 
-    // Tampilkan Modal
     if (modalGalleryFull) {
       modalGalleryFull.classList.add('active');
-      document.body.style.overflow = 'hidden'; // Kunci scroll halaman belakang
+      document.body.style.overflow = 'hidden';
     }
   }
 
-  // 2. Fungsi Menutup Modal Galeri
   function closeGalleryModal() {
     if (modalGalleryFull) {
       modalGalleryFull.classList.remove('active');
-      document.body.style.overflow = ''; // Pulihkan scroll halaman belakang
+      document.body.style.overflow = '';
     }
   }
 
-  // 3. Render Filter Pills (Kancing Kategori)
   function renderFilterPills(allPhotos) {
     if (!galleryFilterContainer) return;
 
-    // Ambil daftar kategori unik
     const categories = ['Semua'];
     allPhotos.forEach((p) => {
       if (p.category && !categories.includes(p.category)) {
@@ -625,7 +595,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Filter Foto & Render Grid
   function applyPhotoFilter(category, isUserClick = true) {
     activeCategory = category;
     const yearData = documentationData[activeYear] || documentationData['2026'];
@@ -636,7 +605,6 @@ document.addEventListener('DOMContentLoaded', () => {
       currentFilteredList = yearData.photos.filter((p) => p.category === category);
     }
 
-    // Update Pills Style
     if (galleryFilterContainer) {
       const pills = galleryFilterContainer.querySelectorAll('button');
       pills.forEach((p) => {
@@ -649,21 +617,18 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Update Counter Badge
     if (modalGalleryCountBadge) {
       modalGalleryCountBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> ${currentFilteredList.length} Foto ${category !== 'Semua' ? `[${category}]` : 'Tersedia'}`;
     }
 
     renderGridItems(currentFilteredList);
 
-    // Jika sedang di mode Single Photo, perbarui index
     if (!gallerySingleView?.classList.contains('hidden')) {
       activePhotoIndex = 0;
       updateSinglePhotoDisplay();
     }
   }
 
-  // 5. Render Kartu Foto ke Grid
   function renderGridItems(photos) {
     if (!modalGalleryGridContainer) return;
     modalGalleryGridContainer.innerHTML = '';
@@ -717,14 +682,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Tampilkan Mode Grid
   function showGridView() {
     if (galleryGridView) galleryGridView.classList.remove('hidden');
     if (gallerySingleView) gallerySingleView.classList.add('hidden');
     if (btnBackToGrid) btnBackToGrid.classList.add('hidden');
   }
 
-  // 7. Tampilkan Mode Single Photo Detail
   function showSinglePhoto(index) {
     if (index < 0 || index >= currentFilteredList.length) return;
     activePhotoIndex = index;
@@ -738,12 +701,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateSinglePhotoDisplay();
 
-    // Scroll ke atas area modal
     const scrollArea = document.getElementById('modalGalleryScrollArea');
     if (scrollArea) scrollArea.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  // 8. Update Tampilan Single Photo
   function updateSinglePhotoDisplay() {
     const photo = currentFilteredList[activePhotoIndex];
     if (!photo) return;
@@ -760,7 +721,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (singlePhotoTitle) singlePhotoTitle.textContent = photo.title;
     if (singlePhotoDesc) singlePhotoDesc.textContent = photo.desc;
 
-    // Update state tombol prev & next
     if (btnSinglePrev) btnSinglePrev.disabled = activePhotoIndex === 0;
     if (btnSingleNext) btnSingleNext.disabled = activePhotoIndex === currentFilteredList.length - 1;
 
@@ -768,9 +728,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnSingleNext) btnSingleNext.style.opacity = activePhotoIndex === currentFilteredList.length - 1 ? '0.35' : '1';
   }
 
-  // --- C. EVENT LISTENERS MODAL GALLERY & CAROUSEL ---
-
-  // Klik kartu preview foto di slider utama -> buka single photo view
   const previewCards = document.querySelectorAll('.gallery-card');
   previewCards.forEach((card) => {
     card.addEventListener('click', () => {
@@ -780,7 +737,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Klik kartu ke-6 "Lihat Semua (20+ Foto)" -> buka grid modal lengkap
   const seeAllCards = document.querySelectorAll('[data-open-gallery]');
   seeAllCards.forEach((card) => {
     card.addEventListener('click', (e) => {
@@ -789,7 +745,6 @@ document.addEventListener('DOMContentLoaded', () => {
       openGalleryModal(year, 'grid', 0);
     });
 
-    // Support keyboard Enter & Spasi
     card.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
@@ -799,15 +754,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Tombol Tutup Modal
   btnCloseGalleryModal?.addEventListener('click', closeGalleryModal);
 
-  // Tombol Kembali ke Grid dari Single View
   document.querySelectorAll('.btn-back-to-grid').forEach((btn) => {
     btn.addEventListener('click', showGridView);
   });
 
-  // Tombol Navigasi Prev/Next di Single View
   btnSinglePrev?.addEventListener('click', () => {
     if (activePhotoIndex > 0) {
       activePhotoIndex--;
@@ -822,14 +774,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Tutup jika klik backdrop di luar area konten
   modalGalleryFull?.addEventListener('click', (e) => {
     if (e.target === modalGalleryFull) {
       closeGalleryModal();
     }
   });
 
-  // Keyboard Navigation (Escape, ArrowLeft, ArrowRight)
   document.addEventListener('keydown', (e) => {
     if (!modalGalleryFull?.classList.contains('active')) return;
 
@@ -852,7 +802,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 6. Formulir Usul Kegiatan Warga (Feedback Toast)
   const formUsul = document.getElementById('formUsulKegiatan');
   if (formUsul) {
     formUsul.addEventListener('submit', (e) => {
@@ -860,7 +809,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const nama = document.getElementById('namaPengusul')?.value || 'Warga';
       const kategori = document.getElementById('kategoriKegiatan')?.value || 'Kegiatan';
 
-      // Buat Toast Notifikasi Elegan
       const toast = document.createElement('div');
       toast.style.position = 'fixed';
       toast.style.bottom = '28px';
@@ -879,7 +827,6 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.appendChild(toast);
       formUsul.reset();
 
-      // Tutup modal
       const modal = document.getElementById('modalUsulKegiatan');
       if (modal) modal.classList.remove('open');
 
@@ -889,7 +836,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. FAQ Accordion Interaktif
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach((item) => {
     const btn = item.querySelector('.faq-question-btn');
@@ -898,14 +844,12 @@ document.addEventListener('DOMContentLoaded', () => {
     btn?.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
 
-      // Tutup accordion lain
       faqItems.forEach((other) => {
         other.classList.remove('active');
         const otherCollapse = other.querySelector('.faq-answer-collapse');
         if (otherCollapse) otherCollapse.style.maxHeight = null;
       });
 
-      // Buka/tutup yang diklik
       if (!isActive && collapse) {
         item.classList.add('active');
         collapse.style.maxHeight = collapse.scrollHeight + 'px';
@@ -913,17 +857,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 8. Auto-load Custom JPG Logo if available in assets/images/logo_pencol2.jpg
   const testLogo = new Image();
   testLogo.onload = function() {
     document.querySelectorAll('.brand-logo-img').forEach((el) => {
       el.src = 'assets/images/logo_pencol2.jpg';
-      el.style.transform = 'scale(1.42)'; // Auto crop lingkaran
+      el.style.transform = 'scale(1.42)';
     });
   };
   testLogo.src = 'assets/images/logo_pencol2.jpg';
 
-  // 9. Active Link Navigation on Scroll
   const sections = document.querySelectorAll('section[id]');
   window.addEventListener('scroll', () => {
     const scrollY = window.pageYOffset;
