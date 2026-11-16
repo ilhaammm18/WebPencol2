@@ -64,16 +64,7 @@ tmp/
 cache/
 
 # ===================================================================
-# CATATAN KHUSUS UNTUK FOLDER ASSET:
-# -------------------------------------------------------------------
-# Jika Anda ingin menyembunyikan SELURUH folder assets dari GitHub,
-# hapus tanda pagar (#) pada baris di bawah ini:
-# assets/
-#
-# ⚠️ PERINGATAN: Jika folder 'assets/' dihapus dari GitHub, maka
-# gambar website (logo, hero banner, dsb.) TIDAK AKAN MUNCUL (error 404)
-# di GitHub Pages.
-# Solusi terbaik: Simpan file/foto rahasia ke dalam folder 'assets/private/'
-# atau folder 'private/' yang otomatis sudah diabaikan di atas.
-# ===================================================================
+# Folder gambar disembunyikan dari repositori publik
+assets/images/
+
 
