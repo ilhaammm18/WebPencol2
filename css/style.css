@@ -1,68 +1,51 @@
-/* ===================================================================
-   DESA PENCOL 2 - PORTAL WARGA & PEMUDA
-   Tema: Merah Putih Kemerdekaan (Red & White Festive)
-   Kecamatan Gerih, Kabupaten Ngawi, Jawa Timur
-   =================================================================== */
-
 :root {
-  /* Palet Merah Elegan (Tailwind Red 600 - 800) */
-  --red-primary: #dc2626;     /* Red 600 */
-  --red-dark: #b91c1c;        /* Red 700 */
-  --red-deep: #991b1b;        /* Red 800 */
-  --red-darker: #7f1d1d;      /* Red 900 */
-  --red-light: #fee2e2;       /* Red 100 */
-  --red-tint: #fef2f2;        /* Red 50 */
-  --red-border: #fca5a5;      /* Red 300 */
+
+  --red-primary: #dc2626;
+  --red-dark: #b91c1c;
+  --red-deep: #991b1b;
+  --red-darker: #7f1d1d;
+  --red-light: #fee2e2;
+  --red-tint: #fef2f2;
+  --red-border: #fca5a5;
   --red-glow: rgba(220, 38, 38, 0.25);
 
-  /* Latar Belakang Dominan Putih / Krem Terang */
   --bg-white: #ffffff;
   --bg-cream: #fafaf7;
   --bg-light: #f8fafc;
   --bg-card: #ffffff;
 
-  /* Border & Garis Aksen */
   --border-subtle: #e2e8f0;
   --border-card: #f1f5f9;
   --border-accent: #fecaca;
 
-  /* Warna Teks */
-  --text-primary: #0f172a;    /* Slate 900 */
-  --text-secondary: #334155;  /* Slate 700 */
-  --text-muted: #64748b;      /* Slate 500 */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
   --text-white: #ffffff;
   --text-white-dim: #fecaca;
 
-  /* Status Kas */
   --status-income: #16a34a;
   --status-expense: #dc2626;
   --status-balance: #b91c1c;
 
-  /* Tipografi */
   --font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* Bayangan */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
   --shadow-md: 0 4px 14px rgba(15, 23, 42, 0.06);
   --shadow-lg: 0 10px 25px -4px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
   --shadow-red: 0 8px 20px -3px rgba(220, 38, 38, 0.35);
 
-  /* Radius */
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
   --radius-xl: 28px;
   --radius-pill: 9999px;
 
-  /* Transisi */
   --transition-fast: 0.2s ease;
   --transition-smooth: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ===================================================================
-   RESET & DASAR
-   =================================================================== */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -114,9 +97,6 @@ ul {
   padding: 0 24px;
 }
 
-/* ===================================================================
-   HEADER & NAVBAR (MERAH ELEGAN RED-700)
-   =================================================================== */
 .site-header {
   position: sticky;
   top: 0;
@@ -243,7 +223,6 @@ ul {
   gap: 12px;
 }
 
-/* Tombol CTA Navbar: Usul Kegiatan */
 .btn-nav-usul {
   background: #ffffff;
   color: var(--red-dark);
@@ -298,9 +277,6 @@ ul {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ===================================================================
-   HERO SECTION (MERAH PUTIH KEMERDEKAAN)
-   =================================================================== */
 .hero-section {
   position: relative;
   background: linear-gradient(180deg, #ffffff 0%, var(--bg-cream) 100%);
@@ -375,7 +351,6 @@ ul {
   margin-bottom: 32px;
 }
 
-/* Tombol CTA Utama: Usul Kegiatan */
 .btn-primary-red {
   background: linear-gradient(135deg, var(--red-primary) 0%, var(--red-dark) 100%);
   color: #ffffff;
@@ -443,7 +418,6 @@ ul {
   background: var(--red-primary);
 }
 
-/* Kartu Foto Hero Kemerdekaan */
 .hero-media-box {
   position: relative;
 }
@@ -491,9 +465,6 @@ ul {
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* ===================================================================
-   SECTION HEADINGS & COMMONS
-   =================================================================== */
 .section-wrapper {
   padding: 85px 0;
 }
@@ -546,9 +517,6 @@ ul {
   line-height: 1.6;
 }
 
-/* ===================================================================
-   PROFIL PEMUDA & GOTONG ROYONG
-   =================================================================== */
 .profil-content-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -653,9 +621,6 @@ ul {
   color: var(--text-muted);
 }
 
-/* ===================================================================
-   PENYELENGGARA / PENGURUS (KARTU PROFIL BERGAYA SANTAI)
-   =================================================================== */
 .pengurus-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -776,9 +741,6 @@ ul {
   gap: 5px;
 }
 
-/* ===================================================================
-   ALBUM DOKUMENTASI (SISTEM TAB: AGUSTUS 2025 & AGUSTUS 2026)
-   =================================================================== */
 .tab-controls-wrapper {
   display: flex;
   justify-content: center;
@@ -838,7 +800,6 @@ ul {
   gap: 24px;
 }
 
-/* Slider Dokumentasi Horizontal Track */
 .gallery-slider-track {
   display: flex;
   gap: 1.25rem;
@@ -855,7 +816,6 @@ ul {
   display: none;
 }
 
-/* Modal Gallery Overlay State */
 .modal-gallery-overlay {
   transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), backdrop-filter 0.3s ease;
 }
@@ -865,7 +825,6 @@ ul {
   pointer-events: auto !important;
 }
 
-/* Custom Sleek Scrollbar for Gallery Grid Modal */
 .custom-gallery-scroll {
   scrollbar-width: thin;
   scrollbar-color: rgba(220, 38, 38, 0.6) rgba(15, 23, 42, 0.8);
@@ -888,7 +847,6 @@ ul {
   background: rgba(220, 38, 38, 0.9);
 }
 
-/* Line Clamp Utilities */
 .line-clamp-1 {
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -967,9 +925,6 @@ ul {
   line-height: 1.5;
 }
 
-/* ===================================================================
-   TRANSPARANSI ANGGARAN (PERSIS DI BAWAH DOKUMENTASI)
-   =================================================================== */
 .budget-kpi-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1140,9 +1095,6 @@ ul {
   color: var(--status-expense);
 }
 
-/* ===================================================================
-   FAQ & PUSAT BANTUAN
-   =================================================================== */
 .faq-accordion-list {
   max-width: 820px;
   margin: 0 auto;
@@ -1219,9 +1171,6 @@ ul {
   padding-top: 14px;
 }
 
-/* ===================================================================
-   FOOTER (MERAH ELEGAN RED-700 / RED-800)
-   =================================================================== */
 .site-footer {
   background: linear-gradient(180deg, var(--red-dark) 0%, var(--red-deep) 100%);
   color: #ffffff;
@@ -1244,7 +1193,6 @@ ul {
   max-width: 320px;
 }
 
-/* Ikon Media Sosial: Hanya Instagram & TikTok */
 .footer-socials {
   display: flex;
   gap: 12px;
@@ -1309,7 +1257,6 @@ ul {
   text-decoration: underline;
 }
 
-/* Google Maps Card di Footer: Full Interactive & Zoomable */
 .footer-map-box {
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -1323,7 +1270,7 @@ ul {
   height: 180px;
   border: none;
   display: block;
-  /* Dipastikan bisa di-zoom dan di-klik tanpa batasan */
+
   pointer-events: auto !important;
 }
 
@@ -1373,9 +1320,6 @@ ul {
   color: var(--red-dark);
 }
 
-/* ===================================================================
-   MODAL INTERAKTIF: USUL KEGIATAN & LIGHTBOX
-   =================================================================== */
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -1482,7 +1426,6 @@ textarea.form-control {
   min-height: 100px;
 }
 
-/* Lightbox Modal */
 .lightbox-dialog {
   max-width: 840px;
   background: #0f172a;
@@ -1510,9 +1453,6 @@ textarea.form-control {
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* ===================================================================
-   RESPONSIVE DESIGN (MOBILE & TABLET)
-   =================================================================== */
 @media (max-width: 1024px) {
   .hero-layout {
     grid-template-columns: 1fr;

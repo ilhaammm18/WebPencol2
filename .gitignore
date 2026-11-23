@@ -1,9 +1,3 @@
-# ===================================================================
-# .gitignore - Web Pencol 2
-# Mencegah file sensitif, data warga, dan file lokal terupload ke GitHub
-# ===================================================================
-
-# 1. Kredensial, API Keys & File Lingkungan
 .env
 .env.*
 !.env.example
@@ -14,7 +8,6 @@
 credentials.json
 secrets/
 
-# 2. Folder Khusus Data Sensitif & Berkas Internal (Hanya ada di komputer lokal)
 private/
 secret/
 arsip/
@@ -23,7 +16,6 @@ dokumen/
 assets/private/
 assets/raw/
 
-# 3. Dokumen Warga, Rekap Kas Riil, Database & Berkas Backup
 *.xlsx
 *.xls
 *.csv
@@ -38,7 +30,6 @@ assets/raw/
 *.sqlite
 *.bak
 
-# 4. Konfigurasi Editor & IDE
 .vscode/
 .idea/
 *.sublime-project
@@ -46,14 +37,12 @@ assets/raw/
 *.swp
 *.swo
 
-# 5. File Sampah Sistem Operasi
 .DS_Store
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 
-# 6. Log & Cache Sementara
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -63,8 +52,4 @@ yarn-error.log*
 tmp/
 cache/
 
-# ===================================================================
-# Folder gambar disembunyikan dari repositori publik
 assets/images/
-
-

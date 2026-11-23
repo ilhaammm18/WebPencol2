@@ -7,17 +7,15 @@
   <meta name="description" content="Portal resmi informasi gotong royong, kepengurusan karang taruna, dokumentasi kemerdekaan 17-an, dan transparansi anggaran warga Pencol 2, Gerih, Ngawi.">
   <meta name="keywords" content="Pencol 2, Gerih, Ngawi, Karang Taruna, Kemerdekaan, 17-an, Transparansi Kas">
 
-  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS v3 via CDN (Preflight disabled agar kompatibel penuh dengan style.css) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       corePlugins: {
-        preflight: false, // Menjaga integritas reset CSS dan styling yang ada di style.css
+        preflight: false,
       },
       theme: {
         extend: {
@@ -41,18 +39,14 @@
     };
   </script>
 
-  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ===================================================================
-       1. NAVBAR (MERAH ELEGAN RED-700)
-       =================================================================== -->
   <header class="site-header" id="header">
     <div class="container">
       <nav class="navbar" aria-label="Navigasi Utama">
-        <!-- Brand Logo & Nama Situs -->
+
         <a href="#hero" class="brand-wrapper" aria-label="Beranda Pencol 2">
           <div class="brand-logo-badge" aria-label="Logo Karang Taruna Pencol 2">
             <img src="assets/images/logo_karang_taruna.svg" alt="Logo Karang Taruna Pencol 2 Randusongo" class="brand-logo-img">
@@ -66,7 +60,6 @@
           </div>
         </a>
 
-        <!-- Menu Ringkas Navigasi -->
         <ul class="nav-menu" id="primaryNavMenu">
           <li><a href="#profil" class="nav-link">Profil</a></li>
           <li><a href="#pengurus" class="nav-link">Pengurus</a></li>
@@ -76,7 +69,6 @@
           <li><a href="#kontak" class="nav-link">Kontak</a></li>
         </ul>
 
-        <!-- Tombol Aksi: Usul Kegiatan -->
         <div class="nav-actions">
           <button class="btn-nav-usul" data-open-modal="modalUsulKegiatan" id="btnNavUsul">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -86,7 +78,6 @@
           </button>
         </div>
 
-        <!-- Tombol Menu Mobile -->
         <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
           <span></span>
           <span></span>
@@ -96,13 +87,10 @@
     </div>
   </header>
 
-  <!-- ===================================================================
-       2. HERO SECTION (BANNER SAMBUTAN KEMERDEKAAN & USUL KEGIATAN)
-       =================================================================== -->
   <section class="hero-section" id="hero">
     <div class="container">
       <div class="hero-layout">
-        <!-- Teks Sambutan Hero -->
+
         <div class="hero-text-block">
           <div class="hero-badge-festive">
             <span></span> Semangat Kemerdekaan & Gotong Royong Warga
@@ -130,7 +118,6 @@
             </a>
           </div>
 
-          <!-- Chip Informasi Cepat -->
           <div class="hero-stat-chips">
             <div class="stat-chip-item">
               <span class="dot-red"></span>
@@ -147,7 +134,6 @@
           </div>
         </div>
 
-        <!-- Visual Foto Hero Kemerdekaan -->
         <div class="hero-media-box">
           <div class="hero-image-card">
             <img src="assets/images/perayaan_17an.jpg" alt="Keseruan Lomba 17 Agustus Warga Pencol 2">
@@ -161,9 +147,6 @@
     </div>
   </section>
 
-  <!-- ===================================================================
-       3. PROFIL PEMUDA & GOTONG ROYONG
-       =================================================================== -->
   <section class="section-wrapper bg-white" id="profil">
     <div class="container">
       <div class="section-header">
@@ -175,7 +158,7 @@
       </div>
 
       <div class="profil-content-grid">
-        <!-- Kolom Teks Nilai & Visi -->
+
         <div class="profil-text-block">
           <p>
             <strong>Karang Taruna Pencol 2</strong> (Dusun Randusongo, Desa Pencol, Kec. Gerih, Kab. Ngawi) adalah wadah berhimpun seluruh pemuda-pemudi untuk menjaga keharmonisan lingkungan, menggerakkan aksi sosial, dan membina generasi muda berkarakter.
@@ -198,7 +181,6 @@
           </div>
         </div>
 
-        <!-- Kolom Foto Musyawarah Pendopo -->
         <div class="profil-photo-frame">
           <img src="assets/images/musyawarah_desa.jpg" alt="Musyawarah Pemuda di Balai Pendopo Dusun Pencol 2">
           <div class="profil-stamp">
@@ -210,9 +192,6 @@
     </div>
   </section>
 
-  <!-- ===================================================================
-       4. PENYELENGGARA / PENGURUS (KARTU PROFIL BERGAYA SANTAI)
-       =================================================================== -->
   <section class="section-wrapper bg-cream" id="pengurus">
     <div class="container">
       <div class="section-header">
@@ -224,7 +203,7 @@
       </div>
 
       <div class="pengurus-grid">
-        <!-- Kartu 1: Ketua -->
+
         <div class="profile-card">
           <div class="avatar-wrapper">
             <div class="avatar-initials">RP</div>
@@ -235,7 +214,6 @@
           <div class="profile-contact-chip">📱 0812-3456-7890</div>
         </div>
 
-        <!-- Kartu 2: Wakil Ketua -->
         <div class="profile-card">
           <div class="avatar-wrapper">
             <div class="avatar-initials" style="background: linear-gradient(135deg, #b91c1c, #991b1b);">BS</div>
@@ -246,7 +224,6 @@
           <div class="profile-contact-chip">📱 0813-9876-5432</div>
         </div>
 
-        <!-- Kartu 3: Bendahara Umum -->
         <div class="profile-card">
           <div class="avatar-wrapper">
             <div class="avatar-initials" style="background: linear-gradient(135deg, #15803d, #166534);">AF</div>
@@ -257,7 +234,6 @@
           <div class="profile-contact-chip">📱 0857-1234-5678</div>
         </div>
 
-        <!-- Kartu 4: Sekretaris -->
         <div class="profile-card">
           <div class="avatar-wrapper">
             <div class="avatar-initials" style="background: linear-gradient(135deg, #dc2626, #b91c1c);">SN</div>
@@ -268,7 +244,6 @@
           <div class="profile-contact-chip">📱 0821-4567-8901</div>
         </div>
 
-        <!-- Kartu 5: Koordinator Acara & Lomba 17-an -->
         <div class="profile-card">
           <div class="avatar-wrapper">
             <div class="avatar-initials" style="background: linear-gradient(135deg, #d97706, #b45309);">DP</div>
@@ -279,7 +254,6 @@
           <div class="profile-contact-chip">📱 0852-3344-5566</div>
         </div>
 
-        <!-- Kartu 6: Koordinator Perlengkapan & Logistik -->
         <div class="profile-card">
           <div class="avatar-wrapper">
             <div class="avatar-initials" style="background: linear-gradient(135deg, #4f46e5, #3730a3);">WT</div>
@@ -293,9 +267,6 @@
     </div>
   </section>
 
-  <!-- ===================================================================
-       5. ALBUM DOKUMENTASI (SISTEM TAB: AGUSTUS 2025 & AGUSTUS 2026)
-       =================================================================== -->
   <section class="section-wrapper bg-white" id="dokumentasi">
     <div class="container">
       <div class="section-header">
@@ -306,7 +277,6 @@
         </p>
       </div>
 
-      <!-- Tab Buttons UI -->
       <div class="tab-controls-wrapper">
         <div class="tab-nav" role="tablist" aria-label="Pilih Tahun Dokumentasi">
           <button class="tab-btn active" id="tabBtn2026" data-tab-target="tabPanel2026" role="tab" aria-selected="true">
@@ -318,10 +288,8 @@
         </div>
       </div>
 
-      <!-- TAB PANEL 1: AGUSTUS 2026 (TERBARU) -->
       <div class="tab-content-panel active" id="tabPanel2026" role="tabpanel" aria-labelledby="tabBtn2026">
-        
-        <!-- Slider Controls & Header -->
+
         <div class="flex flex-wrap items-center justify-between gap-3 mb-4 px-1">
           <div class="flex items-center gap-2">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-red-700 text-xs font-bold border border-red-200 shadow-sm">
@@ -331,7 +299,6 @@
             <span class="text-xs text-slate-500 hidden sm:inline">• Geser kartu untuk melihat lainnya</span>
           </div>
 
-          <!-- Slider Arrows Navigasi -->
           <div class="flex items-center gap-2 ml-auto">
             <button type="button" class="slider-btn-prev w-9 h-9 rounded-full border border-slate-200 bg-white text-slate-700 hover:bg-red-600 hover:text-white hover:border-red-600 flex items-center justify-center transition-all duration-200 shadow-sm disabled:opacity-30 disabled:cursor-not-allowed" data-target="slider2026" aria-label="Foto Sebelumnya">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -346,13 +313,11 @@
           </div>
         </div>
 
-        <!-- Slider Track (Horizontal Snap Carousel) -->
         <div class="gallery-slider-track flex gap-5 overflow-x-auto scroll-smooth pb-4 pt-1 snap-x snap-mandatory" id="slider2026">
-          
-          <!-- Foto 1 (2026) -->
+
           <div class="gallery-card group snap-start flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col"
                data-year="2026" data-index="0"
-               data-img="assets/images/perayaan_17an.jpg" 
+               data-img="assets/images/perayaan_17an.jpg"
                data-title="Keseruan Lomba Balap Karung Pesta Rakyat"
                data-desc="Sorak tawa anak-anak dan warga RT 01-04 dalam perlombaan balap karung kemerdekaan di lapangan dusun."
                data-category="Lomba 17-an"
@@ -384,36 +349,35 @@
             </div>
           </div>
 
-         <!-- Foto Lomba Voli -->
 <div class="gallery-card group snap-start flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col"
-     data-year="2025" 
+     data-year="2025"
      data-index="1"
-     data-img="assets/images/dokumentasi/2025/voli/LombaVollyAntarRt-1.jpeg" 
+     data-img="assets/images/dokumentasi/2025/voli/LombaVollyAntarRt-1.jpeg"
      data-title="Keseruan Lomba Voli Antar RT"
      data-desc="Pertandingan voli yang sengit dan meriah antar warga RT di dusun."
      data-category="Lomba Voli"
      data-date="12 Agu 2025">
-  
+
   <div class="relative h-52 sm:h-56 w-full overflow-hidden bg-slate-900">
-    <!-- PERBAIKAN DI SINI: Tambahan assets/images/... dan akhiran .jpg -->
+
     <img src="assets/images/dokumentasi/2025/voli/LombaVollyAntarRt-1.jpeg" alt="Lomba Voli 2025" class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500 ease-out" loading="lazy" decoding="async">
-    
+
     <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3.5">
       <span class="text-white text-xs font-medium flex items-center gap-1.5 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
         Buka Foto Penuh
       </span>
     </div>
-    
+
     <span class="absolute top-3 left-3 bg-red-700/90 text-white text-xs font-bold px-2.5 py-0.5 rounded-full backdrop-blur-md shadow-sm">
       Agustus 2025
     </span>
-    
+
     <span class="absolute top-3 right-3 bg-slate-900/75 text-slate-100 text-[11px] font-semibold px-2 py-0.5 rounded-full backdrop-blur-md">
       Lomba Voli
     </span>
   </div>
-  
+
   <div class="p-5 flex-1 flex flex-col justify-between">
     <div>
       <h4 class="text-base font-bold text-slate-900 group-hover:text-red-600 transition-colors line-clamp-1">Keseruan Lomba Voli</h4>
@@ -425,10 +389,10 @@
          </div>
           </div>
           </div>
-          <!-- Foto 3 (2026) -->
+
           <div class="gallery-card group snap-start flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col"
                data-year="2026" data-index="2"
-               data-img="assets/images/musyawarah_desa.jpg" 
+               data-img="assets/images/musyawarah_desa.jpg"
                data-title="Musyawarah Panitia 17-an & LPJ Kas di Balai Pendopo"
                data-desc="Rapat koordinasi pembagian hadiah lomba dan pembacaan laporan pertanggungjawaban kas kemerdekaan."
                data-category="Musyawarah & Kas"
@@ -460,10 +424,9 @@
             </div>
           </div>
 
-          <!-- Foto 4 (2026) -->
           <div class="gallery-card group snap-start flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col"
                data-year="2026" data-index="3"
-               data-img="assets/images/hero_pencol.jpg" 
+               data-img="assets/images/hero_pencol.jpg"
                data-title="Pemasangan Bendera & 100+ Umbul-Umbul Dusun"
                data-desc="Semangat pemuda Karang Taruna mempercantik jalan gang dusun dengan 100+ bendera merah putih."
                data-category="Gotong Royong"
@@ -495,10 +458,9 @@
             </div>
           </div>
 
-          <!-- Foto 5 (2026) -->
           <div class="gallery-card group snap-start flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col"
                data-year="2026" data-index="4"
-               data-img="assets/images/perayaan_17an.jpg" 
+               data-img="assets/images/perayaan_17an.jpg"
                data-title="Lomba Tradisional Makan Kerupuk Anak-Anak"
                data-desc="Keceriaan anak-anak RT 01 s/d RT 04 beradu tangkas dalam lomba khas kemerdekaan penuh tawa."
                data-category="Lomba 17-an"
@@ -530,17 +492,15 @@
             </div>
           </div>
 
-          <!-- ITEM KE-6: KARTU 'LIHAT SEMUA (20+ FOTO)' (2026) -->
           <div class="card-see-all group snap-start flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] rounded-2xl bg-gradient-to-br from-red-600 via-red-700 to-rose-900 text-white p-6 shadow-md hover:shadow-2xl hover:shadow-red-600/30 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer flex flex-col justify-between overflow-hidden border border-red-500/40 relative select-none"
                data-open-gallery="2026"
                role="button"
                tabindex="0"
                aria-label="Buka semua galeri 20+ foto Agustus 2026">
-            <!-- Decorative circle backgrounds -->
+
             <div class="absolute -right-8 -top-8 w-36 h-36 rounded-full bg-white/10 blur-xl pointer-events-none group-hover:scale-125 transition-transform duration-500"></div>
             <div class="absolute -left-8 -bottom-8 w-32 h-32 rounded-full bg-black/20 blur-lg pointer-events-none"></div>
 
-            <!-- Top Badge -->
             <div class="relative z-10 flex items-center justify-between">
               <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-xs font-bold text-white border border-white/20">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -551,7 +511,6 @@
               </span>
             </div>
 
-            <!-- Middle Content with Icon -->
             <div class="relative z-10 my-4">
               <div class="w-14 h-14 rounded-2xl bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-inner">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
@@ -569,7 +528,6 @@
               </p>
             </div>
 
-            <!-- Bottom Action Button -->
             <div class="relative z-10 pt-4 border-t border-white/15 flex items-center justify-between font-bold text-sm text-white group-hover:text-amber-200 transition-colors">
               <span>Buka Galeri Penuh</span>
               <span class="w-9 h-9 rounded-full bg-white text-red-700 flex items-center justify-center group-hover:translate-x-1.5 transition-transform duration-300 shadow-md">
@@ -584,10 +542,8 @@
         </div>
       </div>
 
-      <!-- TAB PANEL 2: AGUSTUS 2025 -->
       <div class="tab-content-panel" id="tabPanel2025" role="tabpanel" aria-labelledby="tabBtn2025">
-        
-        <!-- Slider Controls & Header -->
+
         <div class="flex flex-wrap items-center justify-between gap-3 mb-4 px-1">
           <div class="flex items-center gap-2">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-red-700 text-xs font-bold border border-red-200 shadow-sm">
@@ -597,7 +553,6 @@
             <span class="text-xs text-slate-500 hidden sm:inline">• Geser kartu untuk melihat lainnya</span>
           </div>
 
-          <!-- Slider Arrows Navigasi -->
           <div class="flex items-center gap-2 ml-auto">
             <button type="button" class="slider-btn-prev w-9 h-9 rounded-full border border-slate-200 bg-white text-slate-700 hover:bg-red-600 hover:text-white hover:border-red-600 flex items-center justify-center transition-all duration-200 shadow-sm disabled:opacity-30 disabled:cursor-not-allowed" data-target="slider2025" aria-label="Foto Sebelumnya">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -612,13 +567,11 @@
           </div>
         </div>
 
-        <!-- Slider Track (Horizontal Snap Carousel) -->
         <div class="gallery-slider-track flex gap-5 overflow-x-auto scroll-smooth pb-4 pt-1 snap-x snap-mandatory" id="slider2025">
-          
-          <!-- Foto 1 (2025) - Lomba Volly Antar RT -->
+
           <div class="gallery-card group snap-start flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col"
                data-year="2025" data-index="0"
-               data-img="assets/images/Dokumentasi/2025/LombaVollyAntarRt-1.jpeg" 
+               data-img="assets/images/Dokumentasi/2025/LombaVollyAntarRt-1.jpeg"
                data-title="Dokumentasi Lomba Volly Antar RT Dusun Pencol 2"
                data-desc="Keseruan dan kekompakan pemuda Karang Taruna Pencol 2 Randusongo dalam pertandingan volly unik antar-RT menyemarakkan kemerdekaan."
                data-category="Lomba Volly Antar RT"
@@ -650,10 +603,9 @@
             </div>
           </div>
 
-          <!-- Foto 2 (2025) -->
           <div class="gallery-card group snap-start flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col"
                data-year="2025" data-index="1"
-               data-img="assets/images/gotong_royong.jpg" 
+               data-img="assets/images/gotong_royong.jpg"
                data-title="Gotong Royong Pemasangan Gapura 17-an 2025"
                data-desc="Kekompakan pemuda mempersiapkan gerbang masuk dusun bernuansa bambu merah putih tahun 2025."
                data-category="Gotong Royong"
@@ -685,10 +637,9 @@
             </div>
           </div>
 
-          <!-- Foto 3 (2025) -->
           <div class="gallery-card group snap-start flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col"
                data-year="2025" data-index="2"
-               data-img="assets/images/perayaan_17an.jpg" 
+               data-img="assets/images/perayaan_17an.jpg"
                data-title="Peringatan HUT RI ke-80 (Agustus 2025)"
                data-desc="Kenangan perayaan lomba anak-anak dan malam pentas seni rakyat tahun 2025 yang meriah."
                data-category="Lomba 17-an"
@@ -720,10 +671,9 @@
             </div>
           </div>
 
-          <!-- Foto 4 (2025) -->
           <div class="gallery-card group snap-start flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col"
                data-year="2025" data-index="3"
-               data-img="assets/images/musyawarah_desa.jpg" 
+               data-img="assets/images/musyawarah_desa.jpg"
                data-title="Musyawarah Anggaran & Transparansi Kas 2025"
                data-desc="Rapat koordinasi dan transparansi laporan kas kegiatan kemerdekaan tahun 2025 bersama warga."
                data-category="Musyawarah & Kas"
@@ -755,10 +705,9 @@
             </div>
           </div>
 
-          <!-- Foto 5 (2025) -->
           <div class="gallery-card group snap-start flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col"
                data-year="2025" data-index="4"
-               data-img="assets/images/perayaan_17an.jpg" 
+               data-img="assets/images/perayaan_17an.jpg"
                data-title="Keseruan Lomba Tarik Tambang Antar-RT 2025"
                data-desc="Adu kekuatan penuh sportivitas antar pemuda RT 01 dan RT 02 disaksikan ratusan warga."
                data-category="Lomba 17-an"
@@ -790,17 +739,15 @@
             </div>
           </div>
 
-          <!-- ITEM KE-6: KARTU 'LIHAT SEMUA (20+ FOTO)' (2025) -->
           <div class="card-see-all group snap-start flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] rounded-2xl bg-gradient-to-br from-red-600 via-red-700 to-rose-900 text-white p-6 shadow-md hover:shadow-2xl hover:shadow-red-600/30 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer flex flex-col justify-between overflow-hidden border border-red-500/40 relative select-none"
                data-open-gallery="2025"
                role="button"
                tabindex="0"
                aria-label="Buka semua galeri 20+ foto Agustus 2025">
-            <!-- Decorative circle backgrounds -->
+
             <div class="absolute -right-8 -top-8 w-36 h-36 rounded-full bg-white/10 blur-xl pointer-events-none group-hover:scale-125 transition-transform duration-500"></div>
             <div class="absolute -left-8 -bottom-8 w-32 h-32 rounded-full bg-black/20 blur-lg pointer-events-none"></div>
 
-            <!-- Top Badge -->
             <div class="relative z-10 flex items-center justify-between">
               <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-xs font-bold text-white border border-white/20">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -811,7 +758,6 @@
               </span>
             </div>
 
-            <!-- Middle Content with Icon -->
             <div class="relative z-10 my-4">
               <div class="w-14 h-14 rounded-2xl bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-inner">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
@@ -829,7 +775,6 @@
               </p>
             </div>
 
-            <!-- Bottom Action Button -->
             <div class="relative z-10 pt-4 border-t border-white/15 flex items-center justify-between font-bold text-sm text-white group-hover:text-amber-200 transition-colors">
               <span>Buka Galeri Penuh</span>
               <span class="w-9 h-9 rounded-full bg-white text-red-700 flex items-center justify-center group-hover:translate-x-1.5 transition-transform duration-300 shadow-md">
@@ -846,9 +791,6 @@
     </div>
   </section>
 
-  <!-- ===================================================================
-       6. TRANSPARANSI ANGGARAN (PERSIS DI BAWAH DOKUMENTASI)
-       =================================================================== -->
   <section class="section-wrapper bg-cream" id="transparansi">
     <div class="container">
       <div class="section-header">
@@ -859,7 +801,6 @@
         </p>
       </div>
 
-      <!-- Kartu Ringkasan KPI Finansial -->
       <div class="budget-kpi-grid">
         <div class="kpi-card income">
           <div class="kpi-label">Total Pemasukan</div>
@@ -880,7 +821,6 @@
         </div>
       </div>
 
-      <!-- Tabel Keuangan Sederhana -->
       <div class="budget-table-card">
         <div class="budget-table-header">
           <h3>Rincian Pembukuan Kas Acara 17-an (HUT RI)</h3>
@@ -951,9 +891,6 @@
     </div>
   </section>
 
-  <!-- ===================================================================
-       7. FAQ & PUSAT BANTUAN (TANYA JAWAB INTERAKTIF)
-       =================================================================== -->
   <section class="section-wrapper bg-white" id="faq">
     <div class="container">
       <div class="section-header">
@@ -965,7 +902,7 @@
       </div>
 
       <div class="faq-accordion-list">
-        <!-- FAQ 1 -->
+
         <div class="faq-item">
           <button class="faq-question-btn" type="button" aria-expanded="false">
             <span>Berapa besaran iuran kas pemuda dan kas kegiatan 17-an di Pencol 2?</span>
@@ -978,7 +915,6 @@
           </div>
         </div>
 
-        <!-- FAQ 2 -->
         <div class="faq-item">
           <button class="faq-question-btn" type="button" aria-expanded="false">
             <span>Bagaimana cara warga menyampaikan usulan kegiatan atau lomba baru?</span>
@@ -991,7 +927,6 @@
           </div>
         </div>
 
-        <!-- FAQ 3 -->
         <div class="faq-item">
           <button class="faq-question-btn" type="button" aria-expanded="false">
             <span>Bagaimana warga dapat melihat bukti nota atau kuitansi pembelanjaan kas?</span>
@@ -1004,7 +939,6 @@
           </div>
         </div>
 
-        <!-- FAQ 4 -->
         <div class="faq-item">
           <button class="faq-question-btn" type="button" aria-expanded="false">
             <span>Apakah warga perantauan bisa ikut berdonasi untuk kegiatan dusun?</span>
@@ -1020,15 +954,10 @@
     </div>
   </section>
 
-  <!-- ===================================================================
-       8. FOOTER (MERAH ELEGAN RED-700 / RED-800)
-       - HANYA IKON RESMI INSTAGRAM & TIKTOK AKTIF
-       - GOOGLE MAPS IFRAME FULL INTERAKTIF BISA DI-ZOOM
-       =================================================================== -->
   <footer class="site-footer" id="kontak">
     <div class="container">
       <div class="footer-top-grid">
-        <!-- Kolom 1: Profil Brand & Medsos (Hanya Instagram & TikTok) -->
+
         <div class="footer-brand-col">
           <div class="brand-wrapper">
             <div class="brand-logo-badge" style="width: 44px; height: 44px;">
@@ -1044,8 +973,7 @@
           <p class="footer-desc">
             Portal resmi gotong royong pemuda dan warga Pencol 2. Menjaga semangat persatuan kemerdekaan dan transparansi pengelolaan kas masyarakat di Kecamatan Gerih, Kabupaten Ngawi.
           </p>
-          
-          <!-- Ikon Sosial Media: Hanya Instagram & TikTok -->
+
           <div class="footer-socials" aria-label="Media Sosial Resmi Pencol 2">
             <a href="https://www.instagram.com/karangtarunapencol2?cplk=cGN0dmdldmlteW04" target="_blank" rel="noopener noreferrer" class="social-btn" title="Instagram Resmi Pencol 2" aria-label="Instagram">
               <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1062,7 +990,6 @@
           </div>
         </div>
 
-        <!-- Kolom 2: Tautan Cepat -->
         <div>
           <h4 class="footer-col-title">Navigasi Halaman</h4>
           <ul class="footer-nav-list">
@@ -1075,14 +1002,13 @@
           </ul>
         </div>
 
-        <!-- Kolom 3: Google Maps Interaktif (Bisa di-zoom & allowfullscreen) -->
         <div>
           <h4 class="footer-col-title">Peta Dusun Pencol 2</h4>
           <div class="footer-map-box">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15822.40474637762!2d111.41285223097127!3d-7.498216199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e79e6144e6c464b%3A0xe4d2db7aa55628b!2sPencol%2C%20Gerih%2C%20Ngawi%20Regency%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" 
-              allowfullscreen="" 
-              loading="lazy" 
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15822.40474637762!2d111.41285223097127!3d-7.498216199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e79e6144e6c464b%3A0xe4d2db7aa55628b!2sPencol%2C%20Gerih%2C%20Ngawi%20Regency%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid"
+              allowfullscreen=""
+              loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
               title="Peta Lokasi Desa Pencol, Kecamatan Gerih, Kabupaten Ngawi">
             </iframe>
@@ -1094,7 +1020,6 @@
         </div>
       </div>
 
-      <!-- Footer Bottom -->
       <div class="footer-bottom-bar">
         <div>
           &copy; 2026 <strong>Pencol 2</strong> — Karang Taruna & Warga Dusun Randusongo, Desa Pencol, Gerih, Ngawi.
@@ -1106,9 +1031,6 @@
     </div>
   </footer>
 
-  <!-- ===================================================================
-       MODAL INTERAKTIF: USUL KEGIATAN WARGA
-       =================================================================== -->
   <div class="modal-backdrop" id="modalUsulKegiatan" role="dialog" aria-modal="true" aria-labelledby="modalUsulTitle">
     <div class="modal-dialog">
       <div class="modal-header">
@@ -1158,15 +1080,10 @@
     </div>
   </div>
 
-  <!-- ===================================================================
-       MODAL / LIGHTBOX GALLERY LENGKAP (FULLSCREEN TAILWIND CSS)
-       =================================================================== -->
   <div class="modal-gallery-overlay fixed inset-0 z-[9999] bg-slate-950/95 backdrop-blur-2xl flex flex-col transition-all duration-300 opacity-0 pointer-events-none" id="modalGalleryFull" role="dialog" aria-modal="true" aria-labelledby="modalGalleryTitle">
-    
-    <!-- 1. Header Bar Modal -->
+
     <header class="px-4 sm:px-6 md:px-8 py-3.5 sm:py-4 bg-slate-900/90 backdrop-blur-md border-b border-white/10 flex flex-wrap items-center justify-between gap-3 z-30 shrink-0">
-      
-      <!-- Judul & Badge Foto -->
+
       <div class="flex items-center gap-3">
         <div class="w-10 h-10 rounded-xl bg-red-600/20 border border-red-500/30 flex items-center justify-center text-red-500 shrink-0">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1190,12 +1107,10 @@
         </div>
       </div>
 
-      <!-- Filter Kategori Kancing (Pills) -->
       <div class="flex items-center gap-1.5 overflow-x-auto py-1 max-w-full order-3 sm:order-2" id="galleryFilterContainer">
-        <!-- Rendered dynamically: Semua, Lomba 17-an, Gotong Royong, Musyawarah & Kas, Malam Tirakatan, Panggung Hiburan -->
+
       </div>
 
-      <!-- Tombol Aksi Kanan -->
       <div class="flex items-center gap-2 order-2 sm:order-3 ml-auto">
         <button type="button" class="btn-back-to-grid hidden items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-semibold border border-white/15 transition-all shadow-sm" id="btnBackToGrid">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1218,35 +1133,28 @@
 
     </header>
 
-    <!-- 2. Kontainer Utama (Grid Galeri & Detail View) -->
     <main class="flex-1 overflow-y-auto relative p-4 sm:p-6 md:p-8 custom-gallery-scroll" id="modalGalleryScrollArea">
-      
-      <!-- VIEW A: GRID LENGKAP 20+ FOTO -->
+
       <div id="galleryGridView" class="max-w-7xl mx-auto w-full transition-opacity duration-300">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6" id="modalGalleryGridContainer">
-          <!-- Rendered dynamically from documentationData in main.js -->
+
         </div>
       </div>
 
-      <!-- VIEW B: SINGLE PHOTO LIGHTBOX DETAIL (PERBESAR FOTO) -->
       <div id="gallerySingleView" class="hidden max-w-5xl mx-auto w-full flex flex-col items-center justify-center min-h-full py-2 transition-all duration-300">
-        
-        <!-- Frame Gambar & Navigasi -->
+
         <div class="relative w-full flex items-center justify-center">
-          
-          <!-- Tombol Prev -->
+
           <button type="button" class="absolute left-2 sm:left-4 z-20 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-slate-900/80 hover:bg-red-600 text-white border border-white/20 backdrop-blur-md flex items-center justify-center transition-all duration-200 shadow-xl" id="btnSinglePrev" aria-label="Foto Sebelumnya">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="15 18 9 12 15 6"></polyline>
             </svg>
           </button>
 
-          <!-- Foto Utama -->
           <div class="relative max-h-[68vh] sm:max-h-[72vh] rounded-2xl overflow-hidden shadow-2xl bg-black/90 border border-white/10 flex items-center justify-center">
             <img id="singlePhotoImg" src="" alt="Pratinjau Foto Dokumentasi" class="max-h-[68vh] sm:max-h-[72vh] w-auto max-w-full object-contain select-none">
           </div>
 
-          <!-- Tombol Next -->
           <button type="button" class="absolute right-2 sm:right-4 z-20 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-slate-900/80 hover:bg-red-600 text-white border border-white/20 backdrop-blur-md flex items-center justify-center transition-all duration-200 shadow-xl" id="btnSingleNext" aria-label="Foto Selanjutnya">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="9 18 15 12 9 6"></polyline>
@@ -1254,7 +1162,6 @@
           </button>
         </div>
 
-        <!-- Panel Keterangan & Navigasi Bawah -->
         <div class="w-full mt-4 p-4 sm:p-5 rounded-2xl bg-slate-900/90 border border-white/10 backdrop-blur-md flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div class="flex-1">
             <div class="flex items-center gap-2 mb-1.5">
@@ -1281,7 +1188,6 @@
 
   </div>
 
-  <!-- Main JavaScript File -->
   <script src="js/main.js"></script>
 </body>
 </html>
