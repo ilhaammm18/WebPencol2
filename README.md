@@ -10,7 +10,6 @@
     <a href="#-teknologi">Teknologi</a> •
     <a href="#-struktur-direktori">Struktur Direktori</a> •
     <a href="#-cara-menjalankan">Cara Menjalankan</a> •
-    <a href="#-deploy-ke-github-pages">Deploy</a> •
     <a href="#-kontak--sosial-media">Kontak</a>
   </p>
 
@@ -126,24 +125,6 @@ Karena proyek ini dibangun menggunakan **Vanilla Web Stack (HTML, CSS, JS)** tan
 2. Pasang ekstensi **Live Server** (oleh Ritwick Dey).
 3. Klik kanan pada berkas `index.html` lalu pilih **"Open with Live Server"**.
 4. Website akan berjalan di alamat `http://127.0.0.1:5500`.
-
----
-
-## 🌐 Deploy ke GitHub Pages (Gratis & Online)
-
-Agar website ini dapat diakses secara online oleh warga Dusun Pencol 2:
-
-1. Buka repositori Anda di GitHub: `https://github.com/ilhaammm18/WebPencol2`.
-2. Klik tab **Settings** di bagian atas repositori.
-3. Pada bilah navigasi kiri, pilih menu **Pages**.
-4. Pada bagian **Build and deployment**:
-   - **Source**: Pilih `Deploy from a branch`.
-   - **Branch**: Pilih `main` dan folder `/(root)`.
-5. Klik **Save**.
-6. Tunggu 1–2 menit, website Anda akan live di alamat:
-   ```text
-   https://ilhaammm18.github.io/WebPencol2/
-   ```
 
 ---
 
